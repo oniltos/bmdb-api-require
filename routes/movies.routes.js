@@ -1,6 +1,7 @@
-import { Router } from 'express'
-import Movie from '../models/Movie.model.js'
-import Star from '../models/Star.model.js'
+const { Router } =  require('express')
+const Movie = require('../models/Movie.model.js')
+const Star = require('../models/Star.model.js')
+
 
 const moviesRouter = Router()
 
@@ -81,4 +82,4 @@ moviesRouter.delete('/:id', async (req, res) => {
     }
 })
 
-export default moviesRouter
+module.exports = moviesRouter

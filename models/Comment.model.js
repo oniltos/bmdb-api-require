@@ -1,4 +1,6 @@
-import { model, Schema } from 'mongoose'
+// em vez de import variavel from 'biblioteca', usamos const variavel = require('biblioteca')
+const mongoose = require('mongoose')
+const { model, Schema } = mongoose
 
 const commentSchema = new Schema({
     text: {
@@ -11,4 +13,5 @@ const commentSchema = new Schema({
     }
 })
 
-export default model('Comment', commentSchema)
+//Em ves de export default, usamos module.exports = 
+module.exports = model('Comment', commentSchema)

@@ -1,5 +1,5 @@
-import { Router } from 'express'
-import Star from '../models/Star.model.js'
+const { Router } =  require('express')
+const Star = require('../models/Star.model.js')
 
 const starsRouter = Router()
 
@@ -60,4 +60,4 @@ starsRouter.delete('/:id', async (req, res) => {
     }
 })
 
-export default starsRouter
+module.exports = starsRouter

@@ -1,6 +1,8 @@
-import { Router } from "express";
-import Comment from '../models/Comment.model.js'
-import Movie from '../models/Movie.model.js'
+const { Router } =  require('express')
+const Comment = require('../models/Comment.model.js')
+const Movie = require('../models/Movie.model.js')
+
+
 
 const commentsRouter = Router()
 
@@ -17,4 +19,4 @@ commentsRouter.post('/movies/:movieId/comments', async (req, res) => {
     }
 })
 
-export default commentsRouter
+module.exports = commentsRouter

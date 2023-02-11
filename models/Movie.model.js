@@ -1,4 +1,4 @@
-import mongoose from 'mongoose'
+const mongoose = require('mongoose')
 
 const { model, Schema } = mongoose
 
@@ -46,4 +46,4 @@ const movieSchema = new Schema({
     }
 }, { timestamps: true })
 
-export default model('Movie', movieSchema)
+module.exports = model('Movie', movieSchema)

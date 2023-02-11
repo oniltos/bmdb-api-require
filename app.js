@@ -1,11 +1,11 @@
-import dotenv from 'dotenv/config'
-import express from 'express'
-import cors from 'cors'
-import connectDb from './config/db.connection.js'
-import moviesRouter from './routes/movies.routes.js'
-import starsRouter from './routes/stars.routes.js'
-import authRouter from './routes/auth.routes.js'
-import commentsRouter from './routes/comments.routes.js'
+require('dotenv').config()
+const express = require('express')
+const cors = require('cors')
+const connectDb = require('./config/db.connection.js')
+const moviesRouter = require('./routes/movies.routes.js')
+const starsRouter = require('./routes/stars.routes.js')
+const authRouter = require('./routes/auth.routes.js')
+const commentsRouter = require('./routes/comments.routes.js')
 
 const app = express()
 connectDb()

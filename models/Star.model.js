@@ -1,4 +1,4 @@
-import mongoose from 'mongoose'
+const mongoose = require('mongoose')
 
 const { model, Schema } = mongoose
 
@@ -30,4 +30,4 @@ const starSchema = new Schema({
     }]
 }, { timestamps: true })
 
-export default model('Star', starSchema)
+ module.exports = model('Star', starSchema)
